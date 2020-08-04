@@ -1,7 +1,6 @@
-Welcome to your Jupyter Book
+Welcome to Calcium Image Analysis from Pessoa Lab
 ============================
 
-This is a small sample book to give you a feel for how book content is
-structured.
+I am graduate student from ECE , University of Marland. Currently working with calcium imgaing data. 
 
-Check out the content pages bundled with this sample book to get started.
+
