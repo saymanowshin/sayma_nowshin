@@ -2,8 +2,6 @@
 title: My sample book
 author: The Jupyter Book Community
 logo: logo.png
-- name: Hugo setup
-  uses: peaceiris/actions-hugo@v2.4.12
 
 latex:
   latex_documents:
