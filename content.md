@@ -1,4 +1,4 @@
 Content
 =======================
-Background of Calcium imgaing data
-Past analysis on this data
+1. Background of Calcium imgaing data
+2. Past analysis on this data
