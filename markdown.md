@@ -13,6 +13,7 @@ To study the neural basis of decision-making in primary auditory cortex (A1), we
 Each trial’s behavioral response was categorized as a hit (licking after target onset), miss (no licking after a target), false alarm (licking after non-target onset), or correct rejection (no licking in response to a non-target). Incorrect behavioral responses were punished with an 8 s time-out added to the ITI.
 
 ![alt tag](https://user-images.githubusercontent.com/57324666/89338460-9c935480-d66a-11ea-8d41-5da1b4d4a13c.jpg)
+
 Figure 1. Head-fixed pure-tone frequency discrimination task. a. 9 head-fixed mice were trained to discriminate low-frequency target tones (red) vs high-frequency non-target tones (blue). b.  Average lick rates within a trial during task performance. Horizontal black bar shows when the tone was presented. The red trace shows the lick rate for hits (H). The blue trace shows the lick rate for false alarms (F). c. Average performance rates (i.e., H and F rates) for each presented tone frequency. Error bars show two standard errors of the mean (SEMs; n=35 experiments). d.  Cumulative distribution functions (CDFs) for H and F rates.
 
 
