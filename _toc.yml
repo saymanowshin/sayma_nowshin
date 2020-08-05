@@ -1,9 +1,1 @@
 - file: intro
-
-- part: Background
-  chapters:
-  - file: background
- 
-- part: Past Analysis
-  chapters:
-  - file: past_analysis
