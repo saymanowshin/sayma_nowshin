@@ -1,4 +1,4 @@
-# 1. Background of Calcium Imaging data
+# Background of Calcium Imaging data
 
 Auditory communication in natural acoustic environments requires listeners to discriminate sounds based on behavioral meaning, but it is unclear how task-related information about target vs. non-target sounds is encoded in primary auditory cortex (A1). Thus, we trained mice to perform a go/no-go pure-tone frequency discrimination task while we captured the activity of neuronal populations with in vivo 2-photon (2P) Ca2+ imaging during task performance. We found on the single-cell level that the amplitude of responses was modulated by behavioral choice (hit, misses, false alarms and correct rejections). Pure-tone responsiveness in A1 during correct behavioral choices (hits and correct rejections) had a small negative gain. A small positive gain was present during false alarms, while a large negative gain was present in misses.
 
