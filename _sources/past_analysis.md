@@ -1,4 +1,4 @@
-# 2.Past analysis on this data
+# Past analysis on this data
 # Data in .mat file
 The structure arrays in the .mat file of each mouse participated in the experiment named behavior and passive. The behavior structure array contained mouse name, experiment date, delta F/F traces smoothed and corrected (response amplitude) (np 3d: time x k_trials x k_neurons), neuron locations (np 2d: k_neurons x 2 [x,y]), responsive_cells,  bright_cells, frames per second, first lick during a trial (one-hot np 2d: time x k_trials), lick traces for 'target' frequency (one-hot np 2d: time x k_trials) lick traces for 'nontarget' frequency (one-hot np 2d: time x k_trials). If first response is between early window onset and early window offset that trial is categorized with an early tag. But if first response is between response window onset and response window offset, that trial is eligible for reward tag. 
 
