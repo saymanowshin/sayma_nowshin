@@ -1,5 +1,10 @@
-file: intro
-sections:
-- file: background
-- file: past_analysis
-
+- file: intro
+- chapter: Background
+  sections:
+  - file: background
+- chapter: Past Analysis
+  sections:
+  - file: past_analysis
+ -chapter: My Analysis
+  sections:
+  
