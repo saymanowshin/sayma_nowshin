@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>2. 2.Past analysis on this data &#8212; Calcium Imaging Data Analysis</title>
+    <title>2.Past analysis on this data &#8212; Calcium Imaging Data Analysis</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -39,7 +39,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="1. 1. Background of Calcium Imaging data" href="background.html" />
+    <link rel="prev" title="1. Background of Calcium Imaging data" href="background.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -72,35 +72,47 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="current nav sidenav_l1">
+  <p class="caption">
+ <span class="caption-text">
+  Background
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="background.html">
-   1. 1. Background of Calcium Imaging data
+   1. Background of Calcium Imaging data
   </a>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Past Analysis on the data
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. 2.Past analysis on this data
+   2.Past analysis on this data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="#data-in-mat-file">
-   3. Data in .mat file
+   Data in .mat file
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="#pickling-in-python">
-   4. Pickling in python
+   Pickling in python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="#visulaizing-behavior">
-   5. Visulaizing behavior
+   Visulaizing behavior
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="#pca-principal-component-analysis">
-   6. PCA (principal component analysis)
+   PCA (principal component analysis)
   </a>
  </li>
 </ul>
@@ -196,20 +208,20 @@
               <div>
                 
   <div class="section" id="past-analysis-on-this-data">
-<h1><span class="section-number">2. </span>2.Past analysis on this data<a class="headerlink" href="#past-analysis-on-this-data" title="Permalink to this headline">¶</a></h1>
+<h1>2.Past analysis on this data<a class="headerlink" href="#past-analysis-on-this-data" title="Permalink to this headline">¶</a></h1>
 </div>
 <div class="section" id="data-in-mat-file">
-<h1><span class="section-number">3. </span>Data in .mat file<a class="headerlink" href="#data-in-mat-file" title="Permalink to this headline">¶</a></h1>
+<h1>Data in .mat file<a class="headerlink" href="#data-in-mat-file" title="Permalink to this headline">¶</a></h1>
 <p>The structure arrays in the .mat file of each mouse participated in the experiment named behavior and passive. The behavior structure array contained mouse name, experiment date, delta F/F traces smoothed and corrected (response amplitude) (np 3d: time x k_trials x k_neurons), neuron locations (np 2d: k_neurons x 2 [x,y]), responsive_cells,  bright_cells, frames per second, first lick during a trial (one-hot np 2d: time x k_trials), lick traces for ‘target’ frequency (one-hot np 2d: time x k_trials) lick traces for ‘nontarget’ frequency (one-hot np 2d: time x k_trials). If first response is between early window onset and early window offset that trial is categorized with an early tag. But if first response is between response window onset and response window offset, that trial is eligible for reward tag.</p>
 </div>
 <div class="section" id="pickling-in-python">
-<h1><span class="section-number">4. </span>Pickling in python<a class="headerlink" href="#pickling-in-python" title="Permalink to this headline">¶</a></h1>
+<h1>Pickling in python<a class="headerlink" href="#pickling-in-python" title="Permalink to this headline">¶</a></h1>
 <p>In the 00-mat2pkl.py the picking is done on the provided .mat files. After that cells (only non-nans cells) which are responsive in both passive and behavior trials are kept in 01-save responsive.py. Still, some cells are showing bizarre (very high) responses in comparison to other responsive cells. That’s why compute median and standard deviation for each experiment (across trials, time and cells) were computed in 01b-clean_responsive. Then, if a cell’s max response for any trial is greater than median + 10*standard deviation, that cell is removed.</p>
 <p>The standard score (more commonly referred to as a z-score) is a very useful statistic because it allows us to calculate the probability of a score occurring within our normal distribution and enables us to compare two scores that are from different normal distributions. In 01c-clean_zscore_responsive.py file, the z-scored delta F/F traces are saved.</p>
 <p>In 01d-save_bright.py file, we worked with bright cells. Cells which were bright in both passive and behavior trials are kept, bright cells which have nan responses were removed. The z-scored delta F/F traces are saved in 01e-zscore_bright.py file. To remove the cells which are showing bizarre responses (very high), a cell’s absolute max response for every trial is calculated. If for any trial it is greater than k<em>standard deviation, then that cell is removed. For k</em>standard deviation=15, 90% of the neurons retained, so we chose that value to work with.</p>
 </div>
 <div class="section" id="visulaizing-behavior">
-<h1><span class="section-number">5. </span>Visulaizing behavior<a class="headerlink" href="#visulaizing-behavior" title="Permalink to this headline">¶</a></h1>
+<h1>Visulaizing behavior<a class="headerlink" href="#visulaizing-behavior" title="Permalink to this headline">¶</a></h1>
 <p>In 02-visualize behavior.py, for each condition, ‘hit’, ‘miss’, ‘falsealarm’ and ‘correctreject’, for first ten cell calcium traces and lick traces are averaged across trials for each experiment and displayed in figures.</p>
 <p><img alt="alt tag" src="https://user-images.githubusercontent.com/57324666/89362031-cb292380-d69a-11ea-96e2-d8f28d5e6c89.jpg" /></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                                 Figure: Visualizing behavior
@@ -241,7 +253,7 @@ Average number of trials for each condition is calculated in 03b-visualize_behav
 </div>
 </div>
 <div class="section" id="pca-principal-component-analysis">
-<h1><span class="section-number">6. </span>PCA (principal component analysis)<a class="headerlink" href="#pca-principal-component-analysis" title="Permalink to this headline">¶</a></h1>
+<h1>PCA (principal component analysis)<a class="headerlink" href="#pca-principal-component-analysis" title="Permalink to this headline">¶</a></h1>
 <p>For three highest variance components the trajectories are plotted in order of the trial sequences.</p>
 <p><img alt="alt tag" src="https://user-images.githubusercontent.com/57324666/89363239-b39f6a00-d69d-11ea-8faf-58ae51afa210.jpg" /></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                        Figure: trajectories of three highest variance components
@@ -297,7 +309,7 @@ Average number of trials for each condition is calculated in 03b-visualize_behav
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="background.html" title="previous page"><span class="section-number">1. </span>1. Background of Calcium Imaging data</a>
+    <a class='left-prev' id="prev-link" href="background.html" title="previous page">1. Background of Calcium Imaging data</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

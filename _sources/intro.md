@@ -1,6 +1,7 @@
-Welcome to Calcium Image Analysis from Pessoa Lab
+Welcome to your Jupyter Book
 ============================
 
-I am a graduate student from ECE , University of Marland. Currently working with Professor Luiz Pessoa and Professor Joseph Jaja. 
+This is a small sample book to give you a feel for how book content is
+structured.
 
-
+Check out the content pages bundled with this sample book to get started.
