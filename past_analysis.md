@@ -12,3 +12,22 @@ In 01d-save_bright.py file, we worked with bright cells. Cells which were bright
 # Visulaizing behavior
 
 In 02-visualize behavior.py, for each condition, 'hit', 'miss', 'falsealarm' and 'correctreject’, for first ten cell calcium traces and lick traces are averaged across trials for each experiment and displayed in figures. 
+
+
+![alt tag](https://user-images.githubusercontent.com/57324666/89362031-cb292380-d69a-11ea-96e2-d8f28d5e6c89.jpg)
+
+Figure: Visualizing behavior
+
+In 02b-visualize_behavior_stats.py file, we visualize the number of cells in the bright_z-scored_files and responsive (01_save responsive.py) files. 
+Average number of trials for each condition is calculated in 03b-visualize_behavior_mean_clean.py file. 
+
+![alt tag](https://user-images.githubusercontent.com/57324666/89362373-cb75ee80-d69b-11ea-9f62-d9fbf6f521e4.png)
+
+Figure: Average number of trials
+
+Then, for each condition to visualize lick traces, lick traces are averaged across trials for each experiment. The auditory tone was presented between the two vertical lines. 
+
+![alt tag](https://user-images.githubusercontent.com/57324666/89362486-06782200-d69c-11ea-9301-036973dd7ebd.jpg)
+
+Figure:lick traces
+
