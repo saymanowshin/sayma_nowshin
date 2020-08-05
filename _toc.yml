@@ -1,6 +1,6 @@
-file: content
+file: intro
 sections:
-- file: intro
+
 - file: background
 - file: past_analysis
 - file: notebooks
