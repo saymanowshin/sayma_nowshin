@@ -1,1 +1,6 @@
+
 - file: intro
+  numbered: true
+
+- file: background
+- file: past_analysis
