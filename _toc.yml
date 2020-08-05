@@ -1,7 +1,9 @@
 - file: intro
+
 - chapter: Background
   sections:
   - file: background
+  
 - chapter: Past Analysis
   sections:
   - file: past_analysis
