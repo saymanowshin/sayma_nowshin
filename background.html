@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome to Calcium Image Analysis from Pessoa Lab &#8212; Calcium Imaging Data Analysis</title>
+    <title>1. Background of Calcium Imaging data &#8212; Calcium Imaging Data Analysis</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -39,8 +39,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Content with notebooks" href="notebooks.html" />
-    <link rel="prev" title="Content" href="content.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -73,9 +71,9 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Welcome to Calcium Image Analysis from Pessoa Lab
   </a>
  </li>
@@ -122,7 +120,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/background.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -142,10 +140,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/saymanowshin/sayma_nowshin/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/saymanowshin/sayma_nowshin/issues/new?title=Issue%20on%20page%20%2Fbackground.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/saymanowshin/sayma_nowshin/edit/master/intro.md"><button
+        <a class="edit-button" href="https://github.com/saymanowshin/sayma_nowshin/edit/master/background.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -176,9 +174,17 @@
         
               <div>
                 
-  <div class="section" id="welcome-to-calcium-image-analysis-from-pessoa-lab">
-<h1>Welcome to Calcium Image Analysis from Pessoa Lab<a class="headerlink" href="#welcome-to-calcium-image-analysis-from-pessoa-lab" title="Permalink to this headline">¶</a></h1>
-<p>I am a graduate student from ECE , University of Marland. Currently working with Professor Luiz Pessoa and Professor Joseph Jaja.</p>
+  <div class="section" id="background-of-calcium-imaging-data">
+<h1>1. Background of Calcium Imaging data<a class="headerlink" href="#background-of-calcium-imaging-data" title="Permalink to this headline">¶</a></h1>
+<p>Auditory communication in natural acoustic environments requires listeners to discriminate sounds based on behavioral meaning, but it is unclear how task-related information about target vs. non-target sounds is encoded in primary auditory cortex (A1). Thus, we trained mice to perform a go/no-go pure-tone frequency discrimination task while we captured the activity of neuronal populations with in vivo 2-photon (2P) Ca2+ imaging during task performance. We found on the single-cell level that the amplitude of responses was modulated by behavioral choice (hit, misses, false alarms and correct rejections). Pure-tone responsiveness in A1 during correct behavioral choices (hits and correct rejections) had a small negative gain. A small positive gain was present during false alarms, while a large negative gain was present in misses.</p>
+<p>Hit trials had a significantly greater link weight, fewer neurons per subnetwork, and a greater number of subnetworks compared to passive and miss trials. In contrast, incorrect behavioral choices (misses and false alarms) were associated with larger networks but no significant changes in link strength. Thus, correct decisions are associated with compact and stronger networks. In comparison to a pure-tone detection task, pure-tone frequency discrimination involves both target and non-target sounds. The results suggest that decision-making during frequency discrimination evokes different changes for target vs. non-target sounds in both the response amplitude and functional connectivity of neurons in A1.</p>
+<p>We trained mice to perform an auditory discrimination task while using 2-photon imaging to study the activity of neuronal populations with single cell resolution in primary auditory cortex (A1). We found that both the amplitude of neural responses to sounds, and the way that neurons interact reflected the behavioral choices made during task performance. Thus, the results indicate that behavioral choice modulates neuronal circuits already in A1, and that task related plasticity in A1 depends on the behavioral meaning of a sound.</p>
+<p>To study the neural basis of decision-making in primary auditory cortex (A1), we trained 9 transgenic CBA x Thy1-GCaMP6s F1 mice to perform a pure-tone frequency discrimination task during in vivo 2-photon (2P) Ca2+ imaging experiments in A1 (Fig 1). Head-fixed mice were trained to lick a waterspout in response to a low-frequency target tone (7 or 9.9 kHz, red), and to avoid licking the waterspout after hearing a high-frequency non-target tone (14 or 19.8 kHz, 88 blue). The four frequencies were randomized across trials. The mice were trained to withhold behavioral responses for 0.5 s after the onset of a target tone in order to receive the reward of a water droplet. This waiting period enabled us to assess neural responses before the animal indicated its decision.
+Each trial’s behavioral response was categorized as a hit (licking after target onset), miss (no licking after a target), false alarm (licking after non-target onset), or correct rejection (no licking in response to a non-target). Incorrect behavioral responses were punished with an 8 s time-out added to the ITI.</p>
+<p><img alt="alt tag" src="https://user-images.githubusercontent.com/57324666/89338460-9c935480-d66a-11ea-8d41-5da1b4d4a13c.jpg" /></p>
+<p>Figure 1. Head-fixed pure-tone frequency discrimination task. a. 9 head-fixed mice were trained to discriminate low-frequency target tones (red) vs high-frequency non-target tones (blue). b.  Average lick rates within a trial during task performance. Horizontal black bar shows when the tone was presented. The red trace shows the lick rate for hits (H). The blue trace shows the lick rate for false alarms (F). c. Average performance rates (i.e., H and F rates) for each presented tone frequency. Error bars show two standard errors of the mean (SEMs; n=35 experiments). d.  Cumulative distribution functions (CDFs) for H and F rates.</p>
+<p>In general, trials with behavioral responses (i.e., hits and false alarms) had bigger neuronal responses than trials without behavioral responses (i.e., misses and correct rejections). Thus, the pattern of bias in response to low frequency pure-tones during passive trials was absent during behavior. Rather, the change in the magnitude of the response relative to passive trials, i.e., attentional gain, was a function of behavioral choice. Negative gain (i.e., suppression) was most common across behavioral choices, and was similar for both types of correct behavioral responses (i.e., hits and correct rejections). This is consistent with task dependent plasticity observed in ferret A1 during a positive reinforcement tone detection task. However, attentional gain had opposing signs for the two types of incorrect behavioral responses: misses were strongly suppressed while false alarms were mildly enhanced, indicating that unlike tone detection, tone discrimination bidirectionally modulates attentional gain. The results suggest that a hyper-active A1 may lead to misrecognition of a sound, whereas a hypo-active A1 may prevent a sound from being perceived.</p>
+<p>Reference: Nikolas A. Francis1,2, Alireza Sheikhattar3, Behtash Babadi2,3, Patrick O. Kanold1,2,* (2019) Decision-making modulates neuronal responsiveness and functional connectivity in mouse auditory cortex.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -209,8 +215,6 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="content.html" title="previous page">Content</a>
-    <a class='right-next' id="next-link" href="notebooks.html" title="next page">Content with notebooks</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
