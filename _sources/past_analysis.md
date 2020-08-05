@@ -73,3 +73,5 @@ Then the Pearson correlation coefficient and p-value for testing non-correlation
 ![alt tag](https://user-images.githubusercontent.com/57324666/89363669-be0e3380-d69e-11ea-8e4b-40da10be1c2f.jpg)
                                           
                                           Figure: Color coded correlation of lick traces with principal components
+                                          
+Reference: Manasij Venkatesh
