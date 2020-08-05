@@ -1,6 +1,5 @@
 file: intro
 sections:
-
 - file: background
 - file: past_analysis
-- file: notebooks
+
