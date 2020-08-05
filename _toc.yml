@@ -1,6 +1,5 @@
-- chapter: About me
-  sections:
-  - file: intro
+- file: intro
+ 
 
 - chapter: Background
   sections:
