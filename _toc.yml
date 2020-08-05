@@ -1,5 +1,6 @@
 file: content
 sections:
 - file: intro
-- file: markdown
+- file: background
+- file: past_analysis
 - file: notebooks
