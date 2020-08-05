@@ -31,3 +31,44 @@ Then, for each condition to visualize lick traces, lick traces are averaged acro
 
                                                        Figure:lick traces
 
+To visualize delta F/F traces first the traces are averaged across trials for each cell for condition of interest. 
+
+![alt tag](https://user-images.githubusercontent.com/57324666/89362734-9d44de80-d69c-11ea-9a45-b38a62076c6f.jpg)
+
+                                                   Figure: delta F/F traces for clean files (3b)
+
+![alt tag](https://user-images.githubusercontent.com/57324666/89362991-222ff800-d69d-11ea-8d66-6d2a68490666.jpg)
+
+                                               Figure: delta F/F traces for responsive clean z-score files (3c)
+
+![alt tag](https://user-images.githubusercontent.com/57324666/89363051-4ab7f200-d69d-11ea-9d1b-16c90ef2529a.jpg)
+                                              
+                                               Figure: delta F/F traces for bright clean z-score files (3d)
+# PCA (principal component analysis)
+
+For three highest variance components the trajectories are plotted in order of the trial sequences. 
+
+![alt tag](https://user-images.githubusercontent.com/57324666/89363239-b39f6a00-d69d-11ea-8faf-58ae51afa210.jpg)
+                                            
+                                            Figure: trajectories of three highest variance components
+                                           
+Then for each trial type mean of all trajectories (a mean trajectory for hit, miss, etc) are plotted.
+![alt tag](https://user-images.githubusercontent.com/57324666/89363606-9f0fa180-d69e-11ea-8bf0-debcec388c7d.jpg)
+                                            
+                                            Figure: Mean trajectories for all trial types
+ 
+ To see if any of the principal components are highly correlated with lick traces, five high variance components are plotted in full time series.                                
+![alt tag](https://user-images.githubusercontent.com/57324666/89363612-a171fb80-d69e-11ea-8f6f-d4e528ecbd39.jpg)
+
+                                           Figure: Correlation of lick traces with principal components
+                                          
+Then the Pearson correlation coefficient and p-value for testing non-correlation is calculated between the lick traces and principal components.    
+
+![alt tag](https://user-images.githubusercontent.com/57324666/89363666-bd759d00-d69e-11ea-9127-0e84e70abe63.jpg)
+![alt tag](https://user-images.githubusercontent.com/57324666/89363667-be0e3380-d69e-11ea-92fb-5caa252a994f.jpg)
+
+                                           Figure: Correlate pcs with lick trace
+                                           
+![alt tag](https://user-images.githubusercontent.com/57324666/89363669-be0e3380-d69e-11ea-8e4b-40da10be1c2f.jpg)
+                                          
+                                          Figure: Color coded correlation of lick traces with principal components
