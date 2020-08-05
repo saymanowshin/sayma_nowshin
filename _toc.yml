@@ -1,6 +1,10 @@
+- file: in
 
-- file: intro
-  numbered: true
+- chapter: Background
+  sections:
+  - file: background
+  
+- chapter: Past Analysis on the data
+  sections:
+  - file: past_analysis
 
-- file: background
-- file: past_analysis
