@@ -1,38 +1,23 @@
-# Past analysis on this data
-# Data in .mat file
-The structure arrays in the .mat file of each mouse participated in the experiment named behavior and passive. The behavior structure array contained mouse name, experiment date, delta F/F traces smoothed and corrected (response amplitude) (np 3d: time x k_trials x k_neurons), neuron locations (np 2d: k_neurons x 2 [x,y]), responsive_cells,  bright_cells, frames per second, first lick during a trial (one-hot np 2d: time x k_trials), lick traces for 'target' frequency (one-hot np 2d: time x k_trials) lick traces for 'nontarget' frequency (one-hot np 2d: time x k_trials). If first response is between early window onset and early window offset that trial is categorized with an early tag. But if first response is between response window onset and response window offset, that trial is eligible for reward tag. 
+# Analysis on this data
 
-# Pickling in python
+To study the neural basis of decision-making in primary auditory cortex (A1), we trained 9 transgenic CBA x Thy1-GCaMP6s F1 mice to perform a pure-tone frequency discrimination task during in vivo 2-photon (2P) Ca2+ imaging experiments in A1. Head-fixed mice were trained to lick a waterspout in response to a low-frequency target tone (7 or 9.9 kHz, red), and to avoid licking the waterspout after hearing a high-frequency non-target tone (14 or 19.8 kHz, 88 blue). The four frequencies were randomized across trials. The mice were trained to withhold behavioral responses for 0.5 s after the onset of a target tone in order to receive the reward of a water droplet. This waiting period enabled us to assess neural responses before the animal indicated its decision. Each trial’s behavioral response was categorized as a hit (licking after target onset), miss (no licking after a target), false alarm (licking after non-target onset), or correct rejection (no licking in response to a non-target). Incorrect behavioral responses were punished with an 8 s time-out added to the ITI.
 
-In the 00-mat2pkl.py the picking is done on the provided .mat files. After that cells (only non-nans cells) which are responsive in both passive and behavior trials are kept in 01-save responsive.py. Still, some cells are showing bizarre (very high) responses in comparison to other responsive cells. That’s why compute median and standard deviation for each experiment (across trials, time and cells) were computed in 01b-clean_responsive. Then, if a cell's max response for any trial is greater than median + 10*standard deviation, that cell is removed.
-
-The standard score (more commonly referred to as a z-score) is a very useful statistic because it allows us to calculate the probability of a score occurring within our normal distribution and enables us to compare two scores that are from different normal distributions. In 01c-clean_zscore_responsive.py file, the z-scored delta F/F traces are saved. 
-
-In 01d-save_bright.py file, we worked with bright cells. Cells which were bright in both passive and behavior trials are kept, bright cells which have nan responses were removed. The z-scored delta F/F traces are saved in 01e-zscore_bright.py file. To remove the cells which are showing bizarre responses (very high), a cell's absolute max response for every trial is calculated. If for any trial it is greater than k*standard deviation, then that cell is removed. For k*standard deviation=15, 90% of the neurons retained, so we chose that value to work with. 
-
-# Visulaizing behavior
-
-In 02-visualize behavior.py, for each condition, 'hit', 'miss', 'falsealarm' and 'correctreject’, for first ten cell calcium traces and lick traces are averaged across trials for each experiment and displayed in figures. 
-
-
-![alt tag](https://user-images.githubusercontent.com/57324666/89362031-cb292380-d69a-11ea-96e2-d8f28d5e6c89.jpg)
-
-                                                     Figure: Visualizing behavior
-
-In 02b-visualize_behavior_stats.py file, we visualize the number of cells in the bright_z-scored_files and responsive (01_save responsive.py) files. 
-Average number of trials for each condition is calculated in 03b-visualize_behavior_mean_clean.py file. 
+The dataset we are working with contained response amplitude (delta F/F traces) of neurons (np 3d: time x k_trials x k_neurons), neuron locations (np 2d: k_neurons x 2 [x,y]), lick traces (np 2d: time x k_trials) and responsive and bright cells during the trials. Below a figure is added where we can see the average number of trials for each condition of our experiment. 
 
 ![alt tag](https://user-images.githubusercontent.com/57324666/89362373-cb75ee80-d69b-11ea-9f62-d9fbf6f521e4.png)
 
                                                      Figure: Average number of trials
-
-Then, for each condition to visualize lick traces, lick traces are averaged across trials for each experiment. The auditory tone was presented between the two vertical lines. 
+                                                     
+The cells (only non-nans cells) which are responsive in both passive and behavior trials are kept. Still, some cells are showing bizarre (very high) responses in comparison to other responsive cells. That’s why we compute median and standard deviation for each experiment (across trials, time and cells). Then, if a cell’s max response for any trial is greater than median + 10*standard deviation, that cell is removed. 
+To remove the bright cells which are showing bizarre responses (very high), a cell’s absolute max response for every trial is calculated. If for any trial it is greater than k_standard deviation (the value has been chosen by experimenting), then that cell is removed. For k_standard deviation=15, 90% of the neurons retained, so we chose that value to work with.
+Then to visualize the behavior of the cells, the lick traces are averaged across trials for each animal experiment. The auditory tone was presented between the two vertical lines in the heat map. 
 
 ![alt tag](https://user-images.githubusercontent.com/57324666/89362486-06782200-d69c-11ea-9301-036973dd7ebd.jpg)
 
                                                        Figure:lick traces
+                                                       
 
-To visualize delta F/F traces first the traces are averaged across trials for each cell for condition of interest. 
+Then we want to visualize the response amplitude of each cell, so we averaged the calcium traces across trials for each cell(for each trial condition). 
 
 ![alt tag](https://user-images.githubusercontent.com/57324666/89362734-9d44de80-d69c-11ea-9a45-b38a62076c6f.jpg)
 
@@ -45,9 +30,9 @@ To visualize delta F/F traces first the traces are averaged across trials for ea
 ![alt tag](https://user-images.githubusercontent.com/57324666/89363051-4ab7f200-d69d-11ea-9d1b-16c90ef2529a.jpg)
                                               
                                                Figure: delta F/F traces for bright clean z-score files (3d)
-# PCA (principal component analysis)
 
-For three highest variance components the trajectories are plotted in order of the trial sequences. 
+# PCA Analysis
+For three highest variance components the trajectories are plotted below in order of the trial sequences. 
 
 ![alt tag](https://user-images.githubusercontent.com/57324666/89363239-b39f6a00-d69d-11ea-8faf-58ae51afa210.jpg)
                                             

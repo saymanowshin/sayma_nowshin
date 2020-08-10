@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Past analysis on this data &#8212; Calcium Imaging Data Analysis</title>
+    <title>Analysis on this data &#8212; Calcium Imaging Data Analysis</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -92,27 +92,12 @@
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Past analysis on this data
+   Analysis on this data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="#data-in-mat-file">
-   Data in .mat file
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#pickling-in-python">
-   Pickling in python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#visulaizing-behavior">
-   Visulaizing behavior
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#pca-principal-component-analysis">
-   PCA (principal component analysis)
+  <a class="reference internal" href="#pca-analysis">
+   PCA Analysis
   </a>
  </li>
 </ul>
@@ -207,38 +192,22 @@
         
               <div>
                 
-  <div class="section" id="past-analysis-on-this-data">
-<h1>Past analysis on this data<a class="headerlink" href="#past-analysis-on-this-data" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="data-in-mat-file">
-<h1>Data in .mat file<a class="headerlink" href="#data-in-mat-file" title="Permalink to this headline">¶</a></h1>
-<p>The structure arrays in the .mat file of each mouse participated in the experiment named behavior and passive. The behavior structure array contained mouse name, experiment date, delta F/F traces smoothed and corrected (response amplitude) (np 3d: time x k_trials x k_neurons), neuron locations (np 2d: k_neurons x 2 [x,y]), responsive_cells,  bright_cells, frames per second, first lick during a trial (one-hot np 2d: time x k_trials), lick traces for ‘target’ frequency (one-hot np 2d: time x k_trials) lick traces for ‘nontarget’ frequency (one-hot np 2d: time x k_trials). If first response is between early window onset and early window offset that trial is categorized with an early tag. But if first response is between response window onset and response window offset, that trial is eligible for reward tag.</p>
-</div>
-<div class="section" id="pickling-in-python">
-<h1>Pickling in python<a class="headerlink" href="#pickling-in-python" title="Permalink to this headline">¶</a></h1>
-<p>In the 00-mat2pkl.py the picking is done on the provided .mat files. After that cells (only non-nans cells) which are responsive in both passive and behavior trials are kept in 01-save responsive.py. Still, some cells are showing bizarre (very high) responses in comparison to other responsive cells. That’s why compute median and standard deviation for each experiment (across trials, time and cells) were computed in 01b-clean_responsive. Then, if a cell’s max response for any trial is greater than median + 10*standard deviation, that cell is removed.</p>
-<p>The standard score (more commonly referred to as a z-score) is a very useful statistic because it allows us to calculate the probability of a score occurring within our normal distribution and enables us to compare two scores that are from different normal distributions. In 01c-clean_zscore_responsive.py file, the z-scored delta F/F traces are saved.</p>
-<p>In 01d-save_bright.py file, we worked with bright cells. Cells which were bright in both passive and behavior trials are kept, bright cells which have nan responses were removed. The z-scored delta F/F traces are saved in 01e-zscore_bright.py file. To remove the cells which are showing bizarre responses (very high), a cell’s absolute max response for every trial is calculated. If for any trial it is greater than k<em>standard deviation, then that cell is removed. For k</em>standard deviation=15, 90% of the neurons retained, so we chose that value to work with.</p>
-</div>
-<div class="section" id="visulaizing-behavior">
-<h1>Visulaizing behavior<a class="headerlink" href="#visulaizing-behavior" title="Permalink to this headline">¶</a></h1>
-<p>In 02-visualize behavior.py, for each condition, ‘hit’, ‘miss’, ‘falsealarm’ and ‘correctreject’, for first ten cell calcium traces and lick traces are averaged across trials for each experiment and displayed in figures.</p>
-<p><img alt="alt tag" src="https://user-images.githubusercontent.com/57324666/89362031-cb292380-d69a-11ea-96e2-d8f28d5e6c89.jpg" /></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                                 Figure: Visualizing behavior
-</pre></div>
-</div>
-<p>In 02b-visualize_behavior_stats.py file, we visualize the number of cells in the bright_z-scored_files and responsive (01_save responsive.py) files.
-Average number of trials for each condition is calculated in 03b-visualize_behavior_mean_clean.py file.</p>
+  <div class="section" id="analysis-on-this-data">
+<h1>Analysis on this data<a class="headerlink" href="#analysis-on-this-data" title="Permalink to this headline">¶</a></h1>
+<p>To study the neural basis of decision-making in primary auditory cortex (A1), we trained 9 transgenic CBA x Thy1-GCaMP6s F1 mice to perform a pure-tone frequency discrimination task during in vivo 2-photon (2P) Ca2+ imaging experiments in A1. Head-fixed mice were trained to lick a waterspout in response to a low-frequency target tone (7 or 9.9 kHz, red), and to avoid licking the waterspout after hearing a high-frequency non-target tone (14 or 19.8 kHz, 88 blue). The four frequencies were randomized across trials. The mice were trained to withhold behavioral responses for 0.5 s after the onset of a target tone in order to receive the reward of a water droplet. This waiting period enabled us to assess neural responses before the animal indicated its decision. Each trial’s behavioral response was categorized as a hit (licking after target onset), miss (no licking after a target), false alarm (licking after non-target onset), or correct rejection (no licking in response to a non-target). Incorrect behavioral responses were punished with an 8 s time-out added to the ITI.</p>
+<p>The dataset we are working with contained response amplitude (delta F/F traces) of neurons (np 3d: time x k_trials x k_neurons), neuron locations (np 2d: k_neurons x 2 [x,y]), lick traces (np 2d: time x k_trials) and responsive and bright cells during the trials. Below a figure is added where we can see the average number of trials for each condition of our experiment.</p>
 <p><img alt="alt tag" src="https://user-images.githubusercontent.com/57324666/89362373-cb75ee80-d69b-11ea-9f62-d9fbf6f521e4.png" /></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                                 Figure: Average number of trials
 </pre></div>
 </div>
-<p>Then, for each condition to visualize lick traces, lick traces are averaged across trials for each experiment. The auditory tone was presented between the two vertical lines.</p>
+<p>The cells (only non-nans cells) which are responsive in both passive and behavior trials are kept. Still, some cells are showing bizarre (very high) responses in comparison to other responsive cells. That’s why we compute median and standard deviation for each experiment (across trials, time and cells). Then, if a cell’s max response for any trial is greater than median + 10*standard deviation, that cell is removed.
+To remove the bright cells which are showing bizarre responses (very high), a cell’s absolute max response for every trial is calculated. If for any trial it is greater than k_standard deviation (the value has been chosen by experimenting), then that cell is removed. For k_standard deviation=15, 90% of the neurons retained, so we chose that value to work with.
+Then to visualize the behavior of the cells, the lick traces are averaged across trials for each animal experiment. The auditory tone was presented between the two vertical lines in the heat map.</p>
 <p><img alt="alt tag" src="https://user-images.githubusercontent.com/57324666/89362486-06782200-d69c-11ea-9301-036973dd7ebd.jpg" /></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                                   Figure:lick traces
 </pre></div>
 </div>
-<p>To visualize delta F/F traces first the traces are averaged across trials for each cell for condition of interest.</p>
+<p>Then we want to visualize the response amplitude of each cell, so we averaged the calcium traces across trials for each cell(for each trial condition).</p>
 <p><img alt="alt tag" src="https://user-images.githubusercontent.com/57324666/89362734-9d44de80-d69c-11ea-9a45-b38a62076c6f.jpg" /></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                               Figure: delta F/F traces for clean files (3b)
 </pre></div>
@@ -252,9 +221,9 @@ Average number of trials for each condition is calculated in 03b-visualize_behav
 </pre></div>
 </div>
 </div>
-<div class="section" id="pca-principal-component-analysis">
-<h1>PCA (principal component analysis)<a class="headerlink" href="#pca-principal-component-analysis" title="Permalink to this headline">¶</a></h1>
-<p>For three highest variance components the trajectories are plotted in order of the trial sequences.</p>
+<div class="section" id="pca-analysis">
+<h1>PCA Analysis<a class="headerlink" href="#pca-analysis" title="Permalink to this headline">¶</a></h1>
+<p>For three highest variance components the trajectories are plotted below in order of the trial sequences.</p>
 <p><img alt="alt tag" src="https://user-images.githubusercontent.com/57324666/89363239-b39f6a00-d69d-11ea-8faf-58ae51afa210.jpg" /></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                        Figure: trajectories of three highest variance components
 </pre></div>
