@@ -26,9 +26,10 @@ To visualize lick traces, values were averaged across trials (for each animal).
                                                        Figure 3:lick traces (The auditory tone was presented between the two vertical lines in the heat map)
                                                        
  The cells (only non-nans cells) which are responsive in both passive and behavior trials are kept. 
- . some cells are showing very high responses in comparison to other responsive cells.
- . we compute median and standard deviation for each experiment (across trials, time and cells).  
- . if a cell’s max response for any trial is greater than median + 10*standard deviation, that cell is removed.
+ 
+ - some cells are showing very high responses in comparison to other responsive cells.
+ - we compute median and standard deviation for each experiment (across trials, time and cells).  
+ - if a cell’s max response for any trial is greater than median + 10*standard deviation, that cell is removed.
  
 To remove the bright cells which are showing very high outlier responses 
 - a cell’s absolute max response for every trial is calculated. 
