@@ -29,12 +29,12 @@ To visualize lick traces, values were averaged across trials (for each animal).
  
  - some cells are showing very high responses in comparison to other responsive cells.
  - we compute median and standard deviation for each experiment (across trials, time and cells).  
- - if a cell’s max response for any trial is greater than median + 10*standard deviation, that cell is removed.
+ - if a cell’s max response for any trial is greater than median + 10 x standard deviation, that cell is removed.
  
 To remove the bright cells which are showing very high outlier responses 
 - a cell’s absolute max response for every trial is calculated. 
 - If for any trial it is greater than k_standard deviation (the value has been chosen by experimenting), then that cell is removed. 
-- For k_standard deviation=15, 90% of the neurons retained, so we chose that value to work with.                                                     
+- For $k$ SDs = 15, 90% of the neurons retained, so we chose that value to work with.                                                     
 
 To visualize the response amplitude of each cell, the calcium traces were averaged across trials (for each cell for each trial condition). 
 
