@@ -3,9 +3,8 @@
 To study the neural basis of decision-making in primary auditory cortex (A1), we trained 9 transgenic CBA x Thy1-GCaMP6s F1 mice to perform a pure-tone frequency discrimination task during in vivo 2-photon (2P) Ca2+ imaging experiments in A1. Head-fixed mice were trained to lick a waterspout in response to a low-frequency target tone (7 or 9.9 kHz, red), and to avoid licking the waterspout after hearing a high-frequency non-target tone (14 or 19.8 kHz, 88 blue). The four frequencies were randomized across trials. The mice were trained to withhold behavioral responses for 0.5 s after the onset of a target tone in order to receive the reward of a water droplet. This waiting period enabled us to assess neural responses before the animal indicated its decision. Each trial’s behavioral response was categorized as a hit (licking after target onset), miss (no licking after a target), false alarm (licking after non-target onset), or correct rejection (no licking in response to a non-target). Incorrect behavioral responses were punished with an 8 s time-out added to the ITI.
 
 The experiment has total 34 sessions of nine animals( 3 female, 6 male ). The different sessions are performed on different days.  
-![alt tag](https://user-images.githubusercontent.com/57324666/89903107-43b94400-dbb5-11ea-86b9-985aa29d2901.png)
-                                             
-                                             Figure 1: Strcuture of the Data
+![alt tag](https://user-images.githubusercontent.com/57324666/89909399-06f14b00-dbbd-11ea-9e09-86a9f660d2db.png) 
+                                             Figure 1: Strcuture of the Data (bottom to up)
 
 
 
