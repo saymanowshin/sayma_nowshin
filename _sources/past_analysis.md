@@ -4,6 +4,7 @@ To study the neural basis of decision-making in primary auditory cortex (A1), we
 
 The experiment has total 34 sessions of nine animals( 3 female, 6 male ). The different sessions are performed on different days.  
 ![alt tag](https://user-images.githubusercontent.com/57324666/89909399-06f14b00-dbbd-11ea-9e09-86a9f660d2db.png) 
+                                             
                                              Figure 1: Strcuture of the Data (bottom to up)
 
 
