@@ -33,7 +33,7 @@ To visualize lick traces, values were averaged across trials (for each animal).
  
 To remove the bright cells which are showing very high outlier responses 
 - a cell’s absolute max response for every trial is calculated. 
-- If for any trial it is greater than k_standard deviation (the value has been chosen by experimenting), then that cell is removed. 
+- If for any trial it is greater than $k$ SDs (the value has been chosen by experimenting), then that cell is removed. 
 - For $k$ SDs = 15, 90% of the neurons retained, so we chose that value to work with.                                                     
 
 To visualize the response amplitude of each cell, the calcium traces were averaged across trials (for each cell for each trial condition). 
