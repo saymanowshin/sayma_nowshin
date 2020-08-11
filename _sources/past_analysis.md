@@ -29,33 +29,33 @@ To visualize lick traces, values were averaged across trials (for each animal).
  
  - some cells are showing very high responses in comparison to other responsive cells.
  - we compute median and standard deviation for each experiment (across trials, time and cells).  
- - if a cell’s max response for any trial is greater than median + 10 x standard deviation, that cell is removed.
+ - if a cell’s max response for any trial is greater than median + 10\times standard deviation, that cell is removed.
  
 To remove the bright cells which are showing very high outlier responses 
 - a cell’s absolute max response for every trial is calculated. 
-- If for any trial it is greater than $k$ SDs (the value has been chosen by experimenting), then that cell is removed. 
-- For $k$ SDs = 15, 90% of the neurons retained, so we chose that value to work with.                                                     
+- If for any trial it is greater than K SDs (the value has been chosen by experimenting), then that cell is removed. 
+- For k SDs = 15, 90% of the neurons retained, so we chose that value to work with.                                                     
 
 To visualize the response amplitude of each cell, the calcium traces were averaged across trials (for each cell for each trial condition). 
 
 ![alt tag](https://user-images.githubusercontent.com/57324666/89362734-9d44de80-d69c-11ea-9a45-b38a62076c6f.jpg)
 
-                                                   Figure 4: delta F/F traces for clean files (after removing outlier responses (3b)) 
+                                   Figure 4: delta F/F traces for responsive cells (after removing outlier responses (3b)) 
 
 ![alt tag](https://user-images.githubusercontent.com/57324666/89362991-222ff800-d69d-11ea-8d66-6d2a68490666.jpg)
 
-                                               Figure 5 : delta F/F traces for responsive clean z-score files (after performing  z-score (3c))
+                                   Figure 5 : delta F/F traces for responsive cells (  z-scored delta F/F traces after removing outlier responses (3c))
 
 ![alt tag](https://user-images.githubusercontent.com/57324666/89363051-4ab7f200-d69d-11ea-9d1b-16c90ef2529a.jpg)
                                               
-                                               Figure 6 : delta F/F traces for bright clean z-score files (after performing z-score (3d))
+                                   Figure 6 : delta F/F traces for bright cells ( z-scored delta F/F traces after removing outlier responses(3d))
 
 # PCA Analysis
 For three highest variance components the trajectories are plotted below in order of the trial sequences. 
 
 ![alt tag](https://user-images.githubusercontent.com/57324666/89363239-b39f6a00-d69d-11ea-8faf-58ae51afa210.jpg)
                                             
-                                            Figure 7: trajectories of three highest variance components
+                                    Figure 7: trajectories of three highest variance components
                                            
 Then for each trial type mean of all trajectories (a mean trajectory for hit, miss, etc) are plotted.
 ![alt tag](https://user-images.githubusercontent.com/57324666/89363606-9f0fa180-d69e-11ea-8bf0-debcec388c7d.jpg)
