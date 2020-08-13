@@ -45,10 +45,14 @@ To visualize the response amplitude of each cell, the calcium traces were averag
 ![alt tag](https://user-images.githubusercontent.com/57324666/89362991-222ff800-d69d-11ea-8d66-6d2a68490666.jpg)
 
                                    Figure 5 : delta F/F traces for responsive cells (  z-scored delta F/F traces after removing outlier responses (3c))
+                                   
+![alt tag](https://user-images.githubusercontent.com/57324666/90155142-faa1f500-dd58-11ea-9437-1b8abf526c1c.png) 
+
+                                  Figure 6 : delta F/F traces for bright cells ( z-scored delta F/F traces without removing outlier responses(3e))
 
 ![alt tag](https://user-images.githubusercontent.com/57324666/89363051-4ab7f200-d69d-11ea-9d1b-16c90ef2529a.jpg)
                                               
-                                   Figure 6 : delta F/F traces for bright cells ( z-scored delta F/F traces after removing outlier responses(3d))
+                                   Figure 7 : delta F/F traces for bright cells ( z-scored delta F/F traces after removing outlier responses(3d))
 
 # PCA Analysis
 For three highest variance components the trajectories are plotted below in order of the trial sequences. 
